@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bhhfk6xcq4pj3" path="res://Player/Player.tscn" id="1_cq7nm"]
 [ext_resource type="AudioStream" uid="uid://cdr4jdjkpwsbm" path="res://Assets/Sounds/Arcade/BaseMusic.mp3" id="2_6mdle"]
-[ext_resource type="PackedScene" uid="uid://bh5tx3wyajmb8" path="res://GameModes/Arcade/Borders.tscn" id="3_a2y2b"]
+[ext_resource type="PackedScene" uid="uid://bh5tx3wyajmb8" path="res://MiscScenes/Borders/Borders.tscn" id="3_a2y2b"]
 
 [node name="Arcade" type="Node2D"]
 
