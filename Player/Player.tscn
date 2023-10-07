@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhhfk6xcq4pj3"]
+[gd_scene load_steps=6 format=3 uid="uid://bhhfk6xcq4pj3"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_7gixt"]
 [ext_resource type="Texture2D" uid="uid://cjqwocsssewyf" path="res://Assets/Nautolan/Designs - Base/PNGs/Nautolan Ship - Bomber - Base.png" id="1_h3305"]
+[ext_resource type="AudioStream" uid="uid://dnq4faiuqjpun" path="res://Assets/Sounds/Laser.wav" id="3_8le6d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qr4ms"]
 animations = [{
@@ -29,3 +30,9 @@ animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_q0s8t")
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8le6d")
+volume_db = -5.0
+pitch_scale = 0.77
+attenuation = 1.51572
