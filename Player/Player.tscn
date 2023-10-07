@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_7gixt"]
 [ext_resource type="Texture2D" uid="uid://cjqwocsssewyf" path="res://Assets/Nautolan/Designs - Base/PNGs/Nautolan Ship - Bomber - Base.png" id="1_h3305"]
-[ext_resource type="AudioStream" uid="uid://dnq4faiuqjpun" path="res://Assets/Sounds/Laser.wav" id="3_8le6d"]
+[ext_resource type="AudioStream" uid="uid://dnq4faiuqjpun" path="res://Assets/Sounds/sfx/Laser.wav" id="3_7pike"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qr4ms"]
 animations = [{
@@ -32,7 +32,7 @@ animation = &"Idle"
 shape = SubResource("CapsuleShape2D_q0s8t")
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_8le6d")
+stream = ExtResource("3_7pike")
 volume_db = -5.0
 pitch_scale = 0.77
 attenuation = 1.51572
