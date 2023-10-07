@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmkwe84w07wl5"]
+
+[ext_resource type="Texture2D" uid="uid://dehte0ieb2xy8" path="res://Assets/Nautolan/Designs - Base/PNGs/Nautolan Ship - Scout - Base.png" id="1_omtsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dxt2"]
+atlas = ExtResource("1_omtsp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfd68"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dxt2")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pp54x"]
+radius = 15.0
+
+[node name="BlackNautilus" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_dfd68")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pp54x")
