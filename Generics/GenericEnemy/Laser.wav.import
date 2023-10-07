@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dnq4faiuqjpun"
-path="res://.godot/imported/Laser.wav-1b370d8efadd7e227584c87a8afb6a27.sample"
+path="res://.godot/imported/Laser.wav-726ae7b192711c040525cac7a16db0b9.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/sfx/Laser.wav"
-dest_files=["res://.godot/imported/Laser.wav-1b370d8efadd7e227584c87a8afb6a27.sample"]
+source_file="res://Generics/GenericEnemy/Laser.wav"
+dest_files=["res://.godot/imported/Laser.wav-726ae7b192711c040525cac7a16db0b9.sample"]
 
 [params]
 

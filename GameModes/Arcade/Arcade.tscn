@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bhhfk6xcq4pj3" path="res://Player/Player.tscn" id="1_cq7nm"]
 [ext_resource type="AudioStream" uid="uid://cdr4jdjkpwsbm" path="res://Assets/Sounds/Arcade/BaseMusic.mp3" id="2_6mdle"]
 [ext_resource type="PackedScene" uid="uid://bh5tx3wyajmb8" path="res://MiscScenes/Borders/Borders.tscn" id="3_a2y2b"]
-[ext_resource type="PackedScene" uid="uid://cmkwe84w07wl5" path="res://Enemies/BlackNautilus/BlackNautilus.tscn" id="4_55048"]
+[ext_resource type="PackedScene" uid="uid://dlugsjnn4xfq2" path="res://GameModes/Arcade/Background/Background.tscn" id="4_upr3x"]
 
 [node name="Arcade" type="Node2D"]
 
@@ -16,5 +16,4 @@ autoplay = true
 
 [node name="Borders" parent="." instance=ExtResource("3_a2y2b")]
 
-[node name="BlackNautilus" parent="Borders" instance=ExtResource("4_55048")]
-position = Vector2(887, 352)
+[node name="Background" parent="." instance=ExtResource("4_upr3x")]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlugsjnn4xfq2"]
+
+[ext_resource type="Texture2D" uid="uid://daokb2bprvxis" path="res://Assets/Backgrounds/Blue_Nebula.png" id="1_jrg58"]
+[ext_resource type="Script" path="res://GameModes/Arcade/Background/Background.gd" id="1_n1js4"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_n1js4")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(364.545, 303.636)
+scale = Vector2(2, 2)
+texture = ExtResource("1_jrg58")

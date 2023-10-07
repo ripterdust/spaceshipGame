@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-class_name Character
+class_name GenericEnemy
 
 var killGroup: String = "kill_group_name"
 var sound = false
 
-
+func death():
+	pass
+	
 func die():
-	print(killGroup)
+	death()
 	queue_free()
