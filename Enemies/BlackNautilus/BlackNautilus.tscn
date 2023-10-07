@@ -18,15 +18,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pp54x"]
-radius = 15.0
+radius = 12.0
+height = 28.0
 
 [node name="BlackNautilus" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(-3, 0)
+rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_dfd68")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_pp54x")
