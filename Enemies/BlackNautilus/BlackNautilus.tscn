@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmkwe84w07wl5"]
+[gd_scene load_steps=7 format=3 uid="uid://cmkwe84w07wl5"]
 
 [ext_resource type="Script" path="res://Enemies/BlackNautilus/BlackNautilus.gd" id="1_5vt81"]
 [ext_resource type="Texture2D" uid="uid://dehte0ieb2xy8" path="res://Assets/Nautolan/Designs - Base/PNGs/Nautolan Ship - Scout - Base.png" id="1_omtsp"]
+[ext_resource type="AudioStream" uid="uid://bgdsx1haft2t3" path="res://Assets/Sounds/sfx/EnemyDie.wav" id="3_8m6nc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0dxt2"]
 atlas = ExtResource("1_omtsp")
@@ -22,7 +23,7 @@ animations = [{
 radius = 12.0
 height = 28.0
 
-[node name="BlackNautilus" type="CharacterBody2D"]
+[node name="BlackNautilus" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_5vt81")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -37,3 +38,4 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_pp54x")
 
 [node name="DieAnimation" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8m6nc")
