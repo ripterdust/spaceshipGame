@@ -1,13 +1,8 @@
-extends CharacterBody2D
+extends Character
 
 const SCORE: int = 150
 
-@onready var sounds = {
-	"die": $DieAnimation
-}
+func _ready():
+	killGroup = "Player"
 
-func die():
-	sounds["die"].play()
-	
-	queue_free()
-	
+
