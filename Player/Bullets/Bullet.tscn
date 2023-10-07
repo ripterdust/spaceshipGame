@@ -1,8 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://w81ekkfmvbjs"]
+[gd_scene load_steps=12 format=3 uid="uid://w81ekkfmvbjs"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lle7d"]
+[ext_resource type="Texture2D" uid="uid://djen867q82l6j" path="res://Assets/Nautolan/Weapon Effects - Projectiles/PNGs/Nautolan - Spinning Bullet.png" id="1_t5hpg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjiel"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk6ir"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r03x6"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uclu"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbabu"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imui7"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6exjq"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(48, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v5vl"]
+atlas = ExtResource("1_t5hpg")
+region = Rect2(56, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_re2r7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjiel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk6ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r03x6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uclu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbabu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imui7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6exjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v5vl")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uxiem"]
+radius = 4.0
 
 [node name="Bullet" type="Area2D"]
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_re2r7")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.684396
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_lle7d")
+shape = SubResource("CircleShape2D_uxiem")
