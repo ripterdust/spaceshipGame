@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhhfk6xcq4pj3"]
+
+[ext_resource type="Texture2D" uid="uid://cjqwocsssewyf" path="res://Assets/Nautolan/Designs - Base/PNGs/Nautolan Ship - Bomber - Base.png" id="1_h3305"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qr4ms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h3305")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q0s8t"]
+radius = 13.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_qr4ms")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q0s8t")
