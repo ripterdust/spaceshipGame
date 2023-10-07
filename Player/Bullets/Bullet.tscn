@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://w81ekkfmvbjs"]
+[gd_scene load_steps=13 format=3 uid="uid://w81ekkfmvbjs"]
 
+[ext_resource type="Script" path="res://Player/Bullets/Bullet.gd" id="1_rvrm2"]
 [ext_resource type="Texture2D" uid="uid://djen867q82l6j" path="res://Assets/Nautolan/Weapon Effects - Projectiles/PNGs/Nautolan - Spinning Bullet.png" id="1_t5hpg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hjiel"]
@@ -70,12 +71,14 @@ animations = [{
 radius = 4.0
 
 [node name="Bullet" type="Area2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_rvrm2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_re2r7")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.684396
+frame_progress = 0.527264
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_uxiem")

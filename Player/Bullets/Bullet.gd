@@ -1,11 +1,9 @@
 extends Area2D
+class_name Bullet
 
+var speed := 1000
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var new_position = position + Vector2(1, 0) * speed * delta
+	
+	position = new_position
