@@ -19,7 +19,7 @@ animations = [{
 radius = 13.0
 height = 28.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_7gixt")
 
